@@ -168,7 +168,7 @@ int SetCfgItem(char *pFileName, char *pKey, char * pValue, int ValueLen)
 	{
 		rv = -3;
 		printf("ÎÄ¼þ³¬¹ý1024*8, nunsupport");
-		goto End;
+		goto End ;
 	}
 	
 	while (!feof(fp))
