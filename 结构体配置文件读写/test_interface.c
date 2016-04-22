@@ -44,7 +44,7 @@ End:
 int  Test_ModifyTeache()
 {
 	
-	int rv;
+	int rv=0;
 	//显示老师
 	//int ModifyTeacher(char *pfileName, Teacher *pTe);
 	printf("\n读写配置项绿灯测试通过\n");

@@ -135,15 +135,8 @@ int SetCfgItem(char *pFileName, char *pKey, char * pValue, int ValueLen)
 		printf("SetCfgItem() err. param err \n");
 		goto End;
 	}
-	
 	fp = fopen(pFileName, "r+");
-	if (fp == NULL)
-	{
-		rv = -2;
-		printf("fopen() err. \n");
-		//goto End;
-	}
-
+	//检查是否存在
 	if (fp == NULL)
 	{
 		fp = fopen(pFileName, "w+t");
@@ -154,6 +147,16 @@ int SetCfgItem(char *pFileName, char *pKey, char * pValue, int ValueLen)
 			goto End;
 		}
 	}
+
+	
+	if (fp == NULL)
+	{
+		rv = -2;
+		printf("fopen() err. \n");
+		//goto End;
+	}
+
+
 	
 	fseek(fp, 0L, SEEK_END); //把文件指针从0位置开始，移动到文件末尾
 	//获取文件长度;
