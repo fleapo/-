@@ -174,7 +174,7 @@ int SetCfgItem(char *pFileName, char *pKey, char * pValue, int ValueLen)
 	while (!feof(fp))
 	{
 		//∂¡√ø“ª––
-		memset(lineBuf, 0, sizeof(lineBuf));
+		memset(lineBuf,0, sizeof(lineBuf));
 		pTmp = fgets(lineBuf, LineMaxLen, fp);
 		if (pTmp == NULL) 
 		{
